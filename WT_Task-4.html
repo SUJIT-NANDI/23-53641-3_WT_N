@@ -1,0 +1,44 @@
+
+<html>
+<head>
+    <title>HTML Calculator</title>
+    <link rel="stylesheet" href="WT_Task-4.css">
+</head>
+<body>
+
+<div class="calculator">
+
+    <h2>HTML Calculator</h2>
+
+    <input type="text" id="display">
+
+    <div class="buttons">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="add('*')">x</button>
+        <button onclick="add('/')">/</button>
+
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button onclick="add('+')">+</button>
+
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button onclick="add('-')">-</button>
+
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+        <button class="zero" onclick="add('0')">0</button>
+        <button onclick="add('.')">.</button>
+    </div>
+
+</div>
+
+<script src="WT_Task-4.js"></script>
+</body>
+</html>

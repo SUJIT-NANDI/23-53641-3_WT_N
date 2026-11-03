@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Gym Membership</title>
+    <link rel="stylesheet" href="WT_Task-5.css">
+</head>
+<body>
+
+    <header>
+        <h1>City Gym Membership</h1>
+    </header>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Fee (Taka)</th>
+        </tr>
+        <tr>
+            <td>Monthly Plan</td>
+            <td>1500</td>
+        </tr>
+        <tr>
+            <td>Quarterly Plan</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>Yearly Plan</td>
+            <td>14000</td>
+        </tr>
+        <tr>
+            <td>Family Add-on (each)</td>
+            <td>500</td>
+        </tr>
+    </table>
+
+    <form id="memberForm" onsubmit="return validateForm()" novalidate>
+
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName">
+            <span class="error" id="nameError"></span>
+
+            <label for="age">Age</label>
+            <input type="number" id="age">
+            <span class="error" id="ageError"></span>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile">
+            <span class="error" id="mobileError"></span>
+
+            <label for="email">Email</label>
+            <input type="text" id="email">
+            <span class="error" id="emailError"></span>
+
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <span class="error" id="passwordError"></span>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword">
+            <span class="error" id="confirmError"></span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Membership Plan</legend>
+
+            <label for="plan">Plan</label>
+            <select id="plan">
+                <option value="">Select Plan</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Quarterly">Quarterly</option>
+                <option value="Yearly">Yearly</option>
+            </select>
+            <span class="error" id="planError"></span>
+
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate">
+            <span class="error" id="dateError"></span>
+
+            <p class="groupTitle">Workout Time</p>
+            <div class="radioGroup">
+                <input type="radio" name="workout" id="morning" value="Morning">
+                <label for="morning" class="radioLabel">Morning</label>
+
+                <input type="radio" name="workout" id="afternoon" value="Afternoon">
+                <label for="afternoon" class="radioLabel">Afternoon</label>
+
+                <input type="radio" name="workout" id="evening" value="Evening">
+                <label for="evening" class="radioLabel">Evening</label>
+            </div>
+            <span class="error" id="workoutError"></span>
+
+            <div class="trainerRow">
+                <div class="trainerBox">
+                    <label for="mainTrainer">Main Trainer</label>
+                    <select id="mainTrainer">
+                        <option value="">Select Trainer</option>
+                        <option value="Rafi">Rafi</option>
+                        <option value="Mitu">Mitu</option>
+                        <option value="Sabbir">Sabbir</option>
+                        <option value="Joya">Joya</option>
+                    </select>
+                    <span class="error" id="mainError"></span>
+                </div>
+
+                <div class="trainerBox">
+                    <label for="backupTrainer">Backup Trainer</label>
+                    <select id="backupTrainer">
+                        <option value="">Select Trainer</option>
+                        <option value="Rafi">Rafi</option>
+                        <option value="Mitu">Mitu</option>
+                        <option value="Sabbir">Sabbir</option>
+                        <option value="Joya">Joya</option>
+                    </select>
+                    <span class="error" id="backupError"></span>
+                </div>
+            </div>
+
+            <label for="addons">Family Add-ons</label>
+            <input type="number" id="addons">
+            <span class="error" id="addonsError"></span>
+        </fieldset>
+
+        <input type="checkbox" id="agree" onchange="toggleButton()">
+        <label for="agree">I am medically fit to exercise and I accept the gym rules.</label>
+        <br><br>
+
+        <button type="submit" id="joinBtn" disabled>Join Now</button>
+
+        <div class="finalMessage" id="finalMessage"></div>
+    </form>
+
+    <script src="WT_Task-5.js"></script>
+</body>
+</html>
